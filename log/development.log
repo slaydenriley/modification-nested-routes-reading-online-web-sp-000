@@ -3898,3 +3898,24 @@ Processing by AuthorsController#show as HTML
 Completed 200 OK in 44ms (Views: 36.0ms | ActiveRecord: 1.8ms)
 
 
+Started GET "/authors/4/posts/new" for 70.182.168.32 at 2020-02-28 19:02:20 +0000
+Cannot render console from 70.182.168.32! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.9ms)
+  Rendered posts/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 70.182.168.32 at 2020-02-28 19:02:40 +0000
+Cannot render console from 70.182.168.32! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3zSm2Tnm5j++EwmgOQpGdwSdaNf1bFsxQ0mZyew7V98pqJudMYxyTsgRgVEPoHofoVfR2IG2OuJPe0NOvIRwDA==", "post"=>{"title"=>"New Post", "author_id"=>"4", "description"=>"This is a great post."}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "New Post"], ["description", "This is a great post."], ["created_at", "2020-02-28 19:02:40.739728"], ["updated_at", "2020-02-28 19:02:40.739728"], ["author_id", 4]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://165.227.81.218:34792/posts/17
+Completed 302 Found in 13ms (ActiveRecord: 6.5ms)
+
+
