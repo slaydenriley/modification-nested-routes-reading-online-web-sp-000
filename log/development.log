@@ -3930,3 +3930,11 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 34ms (Views: 29.6ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/posts/17" for 70.182.168.32 at 2020-02-28 19:04:05 +0000
+Cannot render console from 70.182.168.32! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (8.3ms)
