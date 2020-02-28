@@ -3815,3 +3815,10 @@ Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.1ms)
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "posts" SET "created_at" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["created_at", "2020-02-27 00:00:00"], ["updated_at", "2020-02-28 18:59:44.530270"], ["id", 16]]
   [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/authors" for 70.182.168.32 at 2020-02-28 19:00:09 +0000
+Cannot render console from 70.182.168.32! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (17.2ms)
